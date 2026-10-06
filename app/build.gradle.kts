@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.google.ksp)
 }
 
 android {
@@ -37,6 +39,31 @@ android {
 }
 
 dependencies {
+    // 1. Navigation & Serialization
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
+
+    // 2. Networking (Retrofit & OkHttp)
+    implementation(libs.retrofit.main)
+    implementation(libs.retrofit.converter.kotlinx.serialization)
+    implementation(libs.okhttp.logging.interceptor)
+
+    // 3. Image Loading (Coil)
+    implementation(libs.coil.compose)
+
+    // 4. ViewModel Compose
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    // 5. Local Data (Room & DataStore)
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.datastore.preferences)
+
+
+    // 7. Icons
+    implementation(libs.androidx.compose.material.icons.extended)
+
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
