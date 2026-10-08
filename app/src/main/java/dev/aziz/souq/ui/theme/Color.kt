@@ -16,6 +16,6 @@ val PrimaryGradient = Brush.horizontalGradient(colors = listOf(PrimaryColor, Pri
 val SecondaryGradient = Brush.horizontalGradient(colors = listOf(Color(0xFFEDD7FA), Color(0xFFFFE0F2)))
 val TextPrimary = Color(0xFF1D2939)
 val TextSecondary = Color(0xFF98A2B3)
-val BackgroundLight = Color(0xFFF9FAFB)
+val BackgroundLight = Color(0xFFF8F9FA)
 val CardBackground = Color.White
 val AccentRed = Color(0xFFFF564F)

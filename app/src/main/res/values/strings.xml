@@ -3,4 +3,6 @@
     <string name="home">Home</string>
     <string name="category">Category</string>
     <string name="profile">Profile</string>
+    <string name="cart">Cart</string>
+
 </resources>
