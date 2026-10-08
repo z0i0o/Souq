@@ -205,7 +205,7 @@ fun ProfileOptionItem(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     backgroundColor: Color = Color.White,
-    iconBackgroundColor: Color = Color(0xF2F4F7),
+    iconBackgroundColor: Color = Color(0xFFF2F4F7),
     textColor: Color = Color.Black,
     iconTint: Color = Color.DarkGray,
     showArrow: Boolean = true
@@ -213,10 +213,11 @@ fun ProfileOptionItem(
     Surface(
         modifier = modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick),
+            .clickable(onClick = onClick)
+            ,
         shape = RoundedCornerShape(16.dp),
         color = backgroundColor,
-        shadowElevation = 0.dp
+        shadowElevation = 2.dp
     ) {
         Row(
             modifier = Modifier
@@ -255,7 +256,7 @@ fun ProfileOptionItem(
 
             if (showArrow) {
                 Icon(
-                    imageVector = Icons.AutoMirrored.Filled.ArrowBackIos, // سهم لجهة اليسار للغة العربية
+                    imageVector = Icons.AutoMirrored.Filled.ArrowBackIos,
                     contentDescription = null,
                     tint = Color.Gray,
                     modifier = Modifier.size(16.dp)
