@@ -37,7 +37,7 @@ fun BottomNavigation(navController: NavHostController) {
     Surface(
         modifier = Modifier
             .navigationBarsPadding()
-            .padding(horizontal = 18.dp, vertical = 5.dp)
+            .padding(horizontal = 18.dp, vertical = 0.dp)
             ,
         shape = RoundedCornerShape(50.dp),
         color = Color.White.copy(alpha = 0.92f),

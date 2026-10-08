@@ -6,5 +6,7 @@ data class Profile(
     val email: String,
     val phone: String,
     val address: String,
-    val image: String
+    val image: String,
+    val points: Int,
+    val activeOrders: Int
 )
