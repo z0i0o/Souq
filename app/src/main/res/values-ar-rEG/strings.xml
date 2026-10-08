@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">سوق</string>
+    <string name="home">الرئيسية</string>
+    <string name="category">الأقسام</string>
+    <string name="profile">حسابي</string>
+    <string name="cart">السلة</string>
+
+    <string name="profile_title">حسابي</string>
+    <string name="profile_image">الصورة الشخصية</string>
+    <string name="profile_menu">القائمة</string>
+    <string name="profile_notifications">الإشعارات</string>
+    <string name="profile_edit">تعديل الحساب</string>
+    <string name="profile_reward_points">نقطة مكافأة</string>
+    <string name="profile_active_orders">طلباتي الحالية</string>
+    <string name="profile_my_orders">طلباتي</string>
+    <string name="profile_wishlist">قائمة الأمنيات</string>
+    <string name="profile_settings">الإعدادات</string>
+    <string name="profile_logout">تسجيل الخروج</string>
+    <string name="profile_elite_title">انضم لبرنامج النخبة</string>
+    <string name="profile_elite_desc">خصومات حصرية وتوصيل مجاني على كل طلباتك.</string>
+    <string name="profile_elite_button">اعرف أكتر</string>
+
+    <string name="MyOrder">طلباتي</string>
+    <string name="wishlist">قائمة الأمنيات</string>
+    <string name="settings">الإعدادات</string>
+    <string name="logout">تسجيل الخروج</string>
+</resources>
