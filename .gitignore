@@ -1,19 +1,35 @@
+# Built application files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Files for the Android Tooling
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
+.gradle/
 /build
+/*/build
 /captures
 .externalNativeBuild
-.cxx
+.cxx/
+
+# Android Studio
+/.idea/
+*.iws
+*.ipr
+
+# Local configuration file (sdk path, etc)
 local.properties
-# Firebase & Secret Keys
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Secrets, Credentials, Firebase & Signing Keys
 google-services.json
+secrets.properties
 *.keystore
 *.jks
