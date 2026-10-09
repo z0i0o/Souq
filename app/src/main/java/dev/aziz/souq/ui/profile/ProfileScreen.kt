@@ -53,7 +53,7 @@ import dev.aziz.souq.ui.theme.LogoutIconBackground
 import dev.aziz.souq.ui.theme.LogoutTextAndIcon
 
 //Fake data
-private val fakeProfile = Profile(
+val fakeProfile = Profile(
     id = 1,
     name = "عبدالعزيز طه",
     email = "abdelaziztaha99@gmail.com",
@@ -64,6 +64,7 @@ private val fakeProfile = Profile(
     activeOrders = 12
 
 )
+
 @Composable
 fun ProfileScreen(profile: Profile = fakeProfile) {
     Column(
@@ -71,14 +72,14 @@ fun ProfileScreen(profile: Profile = fakeProfile) {
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
             .background(BackgroundLight)
-            .padding(top = 5.dp ,start = 20.dp , end = 20.dp , bottom = 100.dp),
+            .padding(top = 5.dp, start = 20.dp, end = 20.dp, bottom = 100.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     )
     {
 
         //first part
-        ImgProfile(profile = profile , onEditClick = {})
-        Spacer( Modifier.heightIn(20.dp))
+        ImgProfile(profile = profile, onEditClick = {})
+        Spacer(Modifier.heightIn(20.dp))
 
         //secend part
         Row(
@@ -108,10 +109,9 @@ fun ProfileScreen(profile: Profile = fakeProfile) {
         ProfileOptionsList()
 
 
-
-
     }
 }
+
 //fisrt part
 @Composable
 private fun ImgProfile(profile: Profile, onEditClick: () -> Unit) {
@@ -172,7 +172,6 @@ private fun ImgProfile(profile: Profile, onEditClick: () -> Unit) {
 }
 
 
-
 //secend part
 @Composable
 private fun StatCard(
@@ -213,8 +212,7 @@ fun ProfileOptionItem(
     Surface(
         modifier = modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick)
-            ,
+            .clickable(onClick = onClick),
         shape = RoundedCornerShape(16.dp),
         color = backgroundColor,
         shadowElevation = 2.dp
@@ -315,9 +313,6 @@ fun ProfileOptionsList(
         )
     }
 }
-
-
-
 
 
 @Preview(showBackground = true)

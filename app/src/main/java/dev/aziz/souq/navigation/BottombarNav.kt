@@ -3,6 +3,7 @@ package dev.aziz.souq.navigation
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Category
@@ -37,8 +38,8 @@ fun BottomNavigation(navController: NavHostController) {
     Surface(
         modifier = Modifier
             .navigationBarsPadding()
-            .padding(horizontal = 18.dp, vertical = 0.dp)
-            ,
+            .padding(horizontal = 18.dp, vertical = 15.dp)
+            .wrapContentSize(),
         shape = RoundedCornerShape(50.dp),
         color = Color.White.copy(alpha = 0.92f),
         shadowElevation = 20.dp
@@ -56,7 +57,7 @@ fun BottomNavigation(navController: NavHostController) {
                     selected = currentRoute == screen.route,
                     onClick = {
                         navController.navigate(screen.route) {
-                            popUpTo(navController.graph.startDestinationId){
+                            popUpTo(navController.graph.startDestinationId) {
                                 saveState = true
                             }
                             restoreState = true

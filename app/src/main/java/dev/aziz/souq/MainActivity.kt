@@ -12,30 +12,36 @@ import androidx.compose.ui.graphics.Color
 import androidx.navigation.compose.rememberNavController
 import dev.aziz.souq.navigation.BottomNavigation
 import dev.aziz.souq.navigation.SouqNavHost
-import dev.aziz.souq.ui.theme.SouqTheme
-import dev.aziz.souq.ui.topbar.TopAppBar
+import dev.aziz.souq.ui.drawer.NavDrawer
+import dev.aziz.souq.ui.topbar.SouqTopAppBar
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            SouqTheme {
 
-                val navController = rememberNavController()
+            val navController = rememberNavController()
+            NavDrawer(
+                onOrdersClick = { },
+                onWishlistClick = { },
+                onSettingsClick = { },
+                onLogoutClick = { }
+            ) { openDrawer ->
+
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
-                    topBar = {TopAppBar()},
+                    topBar = { SouqTopAppBar(onMenuClick = openDrawer) },
                     containerColor = Color.Transparent,
                     bottomBar = { BottomNavigation(navController) }
                 ) { innerPadding ->
 
-                        SouqNavHost(
-                            navController = navController,
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .padding(top = innerPadding.calculateTopPadding())
-                        )
+                    SouqNavHost(
+                        navController = navController,
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(top = innerPadding.calculateTopPadding())
+                    )
 
                 }
             }

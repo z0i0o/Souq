@@ -24,7 +24,7 @@ import dev.aziz.souq.ui.theme.TextPrimary
 // topbar
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TopAppBar() {
+fun SouqTopAppBar(onMenuClick: () -> Unit ) {
     TopAppBar(
         modifier = Modifier.fillMaxWidth(),
         title = {
@@ -39,7 +39,7 @@ fun TopAppBar() {
             )
         },
         navigationIcon = {
-            IconButton(onClick = { }) {
+            IconButton(onClick = onMenuClick ) {
                 Icon(
                     painter = painterResource(id = R.drawable.round_menu_24),
                     contentDescription = "Menu",

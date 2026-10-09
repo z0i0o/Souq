@@ -25,4 +25,7 @@
     <string name="wishlist">قائمة الأمنيات</string>
     <string name="settings">الإعدادات</string>
     <string name="logout">تسجيل الخروج</string>
+
+    <string name="drawer_points">%1$d نقطة</string>
+
 </resources>

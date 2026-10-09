@@ -17,6 +17,11 @@ sealed class Screen(val route: String) {
     object Home : Screen("home")
     object Category : Screen("category")
     object Cart : Screen("cart")
+
+//in drawer
+    data object Orders : Screen("orders")
+    data object Wishlist : Screen("wishlist")
+    data object Settings : Screen("settings")
 }
 
 private fun getScreenIndex(route: String?): Int {
@@ -71,5 +76,8 @@ fun SouqNavHost(navController: NavHostController, modifier: Modifier = Modifier)
         composable(Screen.Profile.route) { ProfileScreen() }
         composable(Screen.Cart.route) { CartScreen() }
         composable(Screen.Category.route) { CategoryScreen() }
+        composable(Screen.Orders.route) { /* OrdersScreen() */ }
+        composable(Screen.Wishlist.route) { /* WishlistScreen() */ }
+        composable(Screen.Settings.route) { /* SettingsScreen() */ }
     }
 }
