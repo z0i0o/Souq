@@ -27,5 +27,99 @@
 
     <string name="drawer_points">%1$d points</string>
 
+        <!-- Authentication & Screens -->
+        <string name="login">Login</string>
+        <string name="register">Register</string>
+        <string name="forget_password">Forget Password</string>
+        <string name="create_new_account">Create new account</string>
+
+        <!-- Fields & Inputs -->
+        <string name="email">Email</string>
+        <string name="password">Password</string>
+        <string name="confirm_password">Confirm Password</string>
+        <string name="hide">Hide</string>
+        <string name="show">Show</string>
+        <string name="send_reset_email">Send Reset Email</string>
+
+        <!-- Success Messages -->
+        <string name="registered_successfully">Registered successfully</string>
+        <string name="logged_in_successfully">Logged in successfully</string>
+        <string name="reset_email_sent">Reset email sent to %s</string>
+
+        <!-- Validation Errors -->
+        <string name="email_is_required">Email is required</string>
+        <string name="invalid_email">Invalid email</string>
+        <string name="password_is_required">Password is required</string>
+        <string name="password_must_be_at_least">Password must be at least 6 characters</string>
+        <string name="passwords_do_not_match">Passwords do not match</string>
+
+    <!-- Category Screen -->
+    <string name="category_search_hint">Search over 50 categories and sections...</string>
+    <string name="category_filter">Filter</string>
+    <string name="category_filter_all">All (48)</string>
+    <string name="category_filter_fashion">Fashion &amp; Style</string>
+    <string name="category_filter_electronics">Electronics</string>
+    <string name="category_filter_beauty">Beauty &amp; Perfumes</string>
+    <string name="category_filter_sports">Sports &amp; Fitness</string>
+    <string name="category_hero_badge">2026 Collections</string>
+    <string name="category_hero_title">Fashion &amp; Style World</string>
+    <string name="category_hero_subtitle">Men • Women • Kids • Luxury Accessories</string>
+    <string name="category_browse_all">Browse All</string>
+    <string name="category_clothing_section">Clothing &amp; Fashion</string>
+    <string name="category_mens_clothing">Men\'s Clothing</string>
+    <string name="category_mens_count">+1,200 products</string>
+    <string name="category_womens_clothing">Women\'s Clothing</string>
+    <string name="category_womens_count">+2,450 products</string>
+    <string name="category_kids_fashion">Kids\' Fashion</string>
+    <string name="category_kids_count">+850 products</string>
+    <string name="category_footwear_section">Luxury Footwear &amp; Accessories</string>
+    <string name="category_sneakers_title">Sports &amp; Casual Shoes</string>
+    <string name="category_sneakers_subtitle">Browse 350+ models</string>
+    <string name="category_formal_shoes_title">Classic &amp; Formal Shoes</string>
+    <string name="category_browse_models">Browse models</string>
+    <string name="category_genuine_leather">Genuine Leather</string>
+    <string name="category_original_brands">Original Brands</string>
+    <string name="category_watches_title">Watches, Glasses &amp; Jewelry</string>
+    <string name="category_watches_subtitle">Latest smart watches and glasses collection</string>
+    <string name="category_explore_section">Explore Section</string>
+    <string name="category_electronics_section">Electronics &amp; Smart Devices</string>
+    <string name="category_phones_title">Phones &amp; Tablets</string>
+    <string name="category_phones_subtitle">Apple, Samsung &amp; more</string>
+    <string name="category_computers_title">Computers &amp; Laptops</string>
+    <string name="category_computers_subtitle">Work &amp; gaming devices</string>
+    <string name="category_audio_title">Audio &amp; Headphones</string>
+    <string name="category_audio_subtitle">Headphones &amp; speakers</string>
+    <string name="category_appliances_title">Home Appliances</string>
+    <string name="category_appliances_subtitle">Kitchen &amp; home care</string>
+    <string name="category_beauty_section">Perfumes, Care &amp; Beauty</string>
+    <string name="category_see_deals">Browse Deals</string>
+    <string name="category_skincare_title">Skin &amp; Body Care</string>
+    <string name="category_skincare_subtitle">Natural serums &amp; creams</string>
+    <string name="category_perfumes_title">Men\'s &amp; Women\'s Perfumes</string>
+    <string name="category_perfumes_subtitle">Browse luxury perfumes</string>
+    <string name="category_perfumes_badge">French &amp; Oriental Perfumes</string>
+    <string name="category_lifestyle_section">Lifestyle &amp; More</string>
+    <string name="category_fitness_title">Sports &amp; Fitness</string>
+    <string name="category_fitness_subtitle">Sports equipment &amp; clothing</string>
+    <string name="category_travel_title">Bags &amp; Travel Gear</string>
+    <string name="category_travel_subtitle">Suitcases &amp; backpacks</string>
+    <string name="category_furniture_title">Furniture &amp; Home Decor</string>
+    <string name="category_furniture_subtitle">Lighting, ornaments &amp; furniture</string>
+    <string name="category_games_title">Games &amp; Entertainment</string>
+    <string name="category_games_subtitle">Kids\' toys &amp; PlayStation</string>
+    <string name="category_trending">Trending &amp; Most Searched</string>
+    <string name="tag_summer_clothes">#summer_clothes</string>
+    <string name="tag_rolex_watches">#rolex_watches</string>
+    <string name="tag_adidas_original">#adidas_original</string>
+    <string name="tag_niche_perfumes">#niche_perfumes</string>
+    <string name="tag_iphone_16">#iphone_16</string>
+    <string name="tag_sports_equipment">#sports_equipment</string>
+    <string name="tag_leather_bags">#leather_bags</string>
+    <string name="tag_modern_decor">#modern_decor</string>
+    <string name="view_more">View More</string>
+    <!-- drawer -->
+    <string name="logoutsuccess">Logout Success</string>
 
 </resources>
+
+

@@ -28,4 +28,100 @@
 
     <string name="drawer_points">%1$d نقطة</string>
 
+
+
+
+        <!-- شاشة تسجيل الدخول والإنشاء -->
+        <string name="login">تسجيل الدخول</string>
+        <string name="register">إنشاء حساب جديد</string>
+        <string name="forget_password">نسيت كلمة المرور؟</string>
+        <string name="create_new_account">إنشاء حساب جديد</string>
+
+        <!-- حقول المدخلات والنصوص -->
+        <string name="email">البريد الإلكتروني</string>
+        <string name="password">كلمة المرور</string>
+        <string name="confirm_password">تأكيد كلمة المرور</string>
+        <string name="hide">إخفاء</string>
+        <string name="show">إظهار</string>
+        <string name="send_reset_email">إرسال بريد إعادة التعيين</string>
+
+        <!-- رسائل النجاح (Success Messages) -->
+        <string name="registered_successfully">تم إنشاء الحساب بنجاح</string>
+        <string name="logged_in_successfully">تم تسجيل الدخول بنجاح</string>
+        <string name="reset_email_sent">تم إرسال بريد إعادة تعيين كلمة المرور إلى %s</string>
+
+        <!-- رسائل الأخطاء والتحقق (Validation Errors) -->
+        <string name="email_is_required">البريد الإلكتروني مطلوب</string>
+        <string name="invalid_email">صيغة البريد الإلكتروني غير صالحة</string>
+        <string name="password_is_required">كلمة المرور مطلوبة</string>
+        <string name="password_must_be_at_least">يجب ألا تقل كلمة المرور عن 6 أحرف</string>
+        <string name="passwords_do_not_match">كلمتا المرور غير متطابقتين</string>
+
+    <string name="category_search_hint">ابحث في أكثر من 50 تصنيف وقسم...</string>
+    <string name="category_filter">فلترة</string>
+    <string name="category_filter_all">الكل (48)</string>
+    <string name="category_filter_fashion">أزياء وموضة</string>
+    <string name="category_filter_electronics">إلكترونيات</string>
+    <string name="category_filter_beauty">جمال وعطور</string>
+    <string name="category_filter_sports">رياضة ولياقة</string>
+    <string name="category_hero_badge">تشكيلات 2026</string>
+    <string name="category_hero_title">عالم الأزياء والموضة</string>
+    <string name="category_hero_subtitle">رجالي • نسائي • أطفال • إكسسوارات فاخرة</string>
+    <string name="category_browse_all">تصفح الكل</string>
+    <string name="category_clothing_section">الملابس والأزياء</string>
+    <string name="category_mens_clothing">ملابس رجالية</string>
+    <string name="category_mens_count">+1,200 منتج</string>
+    <string name="category_womens_clothing">ملابس نسائية</string>
+    <string name="category_womens_count">+2,450 منتج</string>
+    <string name="category_kids_fashion">أزياء الأطفال</string>
+    <string name="category_kids_count">+850 منتج</string>
+    <string name="category_footwear_section">أحذية وإكسسوارات فاخرة</string>
+    <string name="category_sneakers_title">أحذية رياضية وكاجوال</string>
+    <string name="category_sneakers_subtitle">تصفح 350+ موديل</string>
+    <string name="category_formal_shoes_title">أحذية كلاسيكية ورسمية</string>
+    <string name="category_browse_models">تصفح الموديلات</string>
+    <string name="category_genuine_leather">جلد طبيعي</string>
+    <string name="category_original_brands">ماركات أصلية</string>
+    <string name="category_watches_title">ساعات، نظارات ومجوهرات</string>
+    <string name="category_watches_subtitle">أحدث تشكيلة الساعات الذكية والنظارات</string>
+    <string name="category_explore_section">استكشف القسم</string>
+    <string name="category_electronics_section">إلكترونيات وأجهزة ذكية</string>
+    <string name="category_phones_title">هواتف وتابلت</string>
+    <string name="category_phones_subtitle">آبل، سامسونج والمزيد</string>
+    <string name="category_computers_title">كمبيوتر ولابتوب</string>
+    <string name="category_computers_subtitle">أجهزة عمل وألعاب</string>
+    <string name="category_audio_title">صوتيات وسماعات</string>
+    <string name="category_audio_subtitle">سماعات رأس وسبيكرز</string>
+    <string name="category_appliances_title">أجهزة منزلية</string>
+    <string name="category_appliances_subtitle">مطابخ وعناية منزلية</string>
+    <string name="category_beauty_section">عطور وعناية وتجميل</string>
+    <string name="category_see_deals">تصفح التخفيضات</string>
+    <string name="category_skincare_title">عناية بالبشرة والجسم</string>
+    <string name="category_skincare_subtitle">سيرومات وكريمات طبيعية</string>
+    <string name="category_perfumes_title">عطور رجالية ونسائية</string>
+    <string name="category_perfumes_subtitle">تصفح العطور الفاخرة</string>
+    <string name="category_perfumes_badge">العطور الفرنسية والشرقية</string>
+    <string name="category_lifestyle_section">لايف ستايل والمزيد</string>
+    <string name="category_fitness_title">رياضة ولياقة بدنية</string>
+    <string name="category_fitness_subtitle">أجهزة وملابس رياضية</string>
+    <string name="category_travel_title">حقائب ومستلزمات سفر</string>
+    <string name="category_travel_subtitle">حقائب سفر وظهر</string>
+    <string name="category_furniture_title">أثاث وديكور منزلي</string>
+    <string name="category_furniture_subtitle">إضاءات وتحف وأثاث</string>
+    <string name="category_games_title">ألعاب وترفيه</string>
+    <string name="category_games_subtitle">ألعاب أطفال وبلايستيشن</string>
+    <string name="category_trending">الأكثر رواجاً وبحثاً</string>
+    <string name="tag_summer_clothes">#ملابس_صيفية</string>
+    <string name="tag_rolex_watches">#ساعات_رولكس</string>
+    <string name="tag_adidas_original">#أديداس_أوريجينال</string>
+    <string name="tag_niche_perfumes">#عطور_نيش</string>
+    <string name="tag_iphone_16">#آيفون_16</string>
+    <string name="tag_sports_equipment">#أجهزة_رياضية</string>
+    <string name="tag_leather_bags">#حقائب_جلد</string>
+    <string name="tag_modern_decor">#ديكور_مودرن</string>
+    <string name="view_more">عرض المزيد</string>
+
+    <string name="logoutsuccess">تم تسجيل الخروج بنجاح</string>
+
+
 </resources>
