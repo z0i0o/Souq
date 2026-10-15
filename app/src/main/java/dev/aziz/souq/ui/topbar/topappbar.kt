@@ -1,6 +1,8 @@
 package dev.aziz.souq.ui.topbar
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -26,7 +28,9 @@ import dev.aziz.souq.ui.theme.TextPrimary
 @Composable
 fun SouqTopAppBar(onMenuClick: () -> Unit ) {
     TopAppBar(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth()
+            .wrapContentSize()
+            .background(color = BackgroundLight.copy(alpha = 0.19f)),
         title = {
             Text(
                 text = stringResource(R.string.app_name),
@@ -35,7 +39,7 @@ fun SouqTopAppBar(onMenuClick: () -> Unit ) {
                 color = TextPrimary,
                 fontWeight = FontWeight.Bold,
                 fontFamily = FontFamily.SansSerif,
-                fontSize = 28.sp,
+                fontSize = 20.sp,
             )
         },
         navigationIcon = {
@@ -54,6 +58,6 @@ fun SouqTopAppBar(onMenuClick: () -> Unit ) {
                 )
             }
         },
-        colors = TopAppBarDefaults.topAppBarColors(containerColor = BackgroundLight),
+        colors = TopAppBarDefaults.topAppBarColors(containerColor = BackgroundLight.copy(alpha = 0.19f)),
     )
 }
