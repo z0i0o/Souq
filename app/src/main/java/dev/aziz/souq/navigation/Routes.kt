@@ -4,45 +4,57 @@ import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavDestination
+import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import dev.aziz.souq.ui.cart.CartScreen
-import dev.aziz.souq.ui.category.CategoryScreen
-import dev.aziz.souq.ui.home.HomeScreen
-import dev.aziz.souq.ui.profile.ProfileScreen
+import dev.aziz.souq.ui.login.ForgetPasswordScreen
+import dev.aziz.souq.ui.login.LoginScreen
+import dev.aziz.souq.ui.login.RegisterScreen
+import dev.aziz.souq.ui.scaffold.Scaffold
+import kotlinx.serialization.Serializable
 
-sealed class Screen(val route: String) {
-    object Profile : Screen("profile")
-    object Home : Screen("home")
-    object Category : Screen("category")
-    object Cart : Screen("cart")
-
-//in drawer
-    data object Orders : Screen("orders")
-    data object Wishlist : Screen("wishlist")
-    data object Settings : Screen("settings")
+sealed interface Screen {
+    @Serializable data object Profile : Screen
+    @Serializable data object Home : Screen
+    @Serializable data object Category : Screen
+    @Serializable data object Cart : Screen
+    @Serializable data object Orders : Screen
+    @Serializable data object Wishlist : Screen
+    @Serializable data object Settings : Screen
+    @Serializable data object Login : Screen
+    @Serializable data object Register : Screen
+    @Serializable data object Forget : Screen
+    @Serializable data object Scaffold : Screen
 }
 
-private fun getScreenIndex(route: String?): Int {
-    return when (route) {
-        Screen.Profile.route -> 0
-        Screen.Home.route -> 1
-        Screen.Category.route -> 2
-        Screen.Cart.route -> 3
+private fun getAuthScreenIndex(destination: NavDestination?): Int {
+    if (destination == null) return 0
+    return when {
+        destination.hasRoute<Screen.Login>() -> 0
+        destination.hasRoute<Screen.Register>() -> 1
+        destination.hasRoute<Screen.Forget>() -> -1
+        destination.hasRoute<Screen.Scaffold>() -> 3
         else -> 0
     }
 }
 
 @Composable
-fun SouqNavHost(navController: NavHostController, modifier: Modifier = Modifier) {
+fun SouqNavHost(
+    navController: NavHostController,
+    modifier: Modifier = Modifier
+) {
+
+
+
     NavHost(
         navController = navController,
-        startDestination = Screen.Home.route,
+        startDestination = Screen.Login,
         modifier = modifier,
         enterTransition = {
-            val initialIndex = getScreenIndex(initialState.destination.route)
-            val targetIndex = getScreenIndex(targetState.destination.route)
+            val initialIndex = getAuthScreenIndex(initialState.destination)
+            val targetIndex = getAuthScreenIndex(targetState.destination)
 
             val direction = if (targetIndex > initialIndex) {
                 AnimatedContentTransitionScope.SlideDirection.Left
@@ -52,13 +64,12 @@ fun SouqNavHost(navController: NavHostController, modifier: Modifier = Modifier)
 
             slideIntoContainer(
                 towards = direction,
-                animationSpec = tween(durationMillis = 450)
+                animationSpec = tween(durationMillis = 800)
             )
         },
-
         exitTransition = {
-            val initialIndex = getScreenIndex(initialState.destination.route)
-            val targetIndex = getScreenIndex(targetState.destination.route)
+            val initialIndex = getAuthScreenIndex(initialState.destination)
+            val targetIndex = getAuthScreenIndex(targetState.destination)
 
             val direction = if (targetIndex > initialIndex) {
                 AnimatedContentTransitionScope.SlideDirection.Left
@@ -68,16 +79,13 @@ fun SouqNavHost(navController: NavHostController, modifier: Modifier = Modifier)
 
             slideOutOfContainer(
                 towards = direction,
-                animationSpec = tween(durationMillis = 450)
+                animationSpec = tween(durationMillis = 800)
             )
         }
     ) {
-        composable(Screen.Home.route) { HomeScreen(navController) }
-        composable(Screen.Profile.route) { ProfileScreen() }
-        composable(Screen.Cart.route) { CartScreen() }
-        composable(Screen.Category.route) { CategoryScreen() }
-        composable(Screen.Orders.route) { /* OrdersScreen() */ }
-        composable(Screen.Wishlist.route) { /* WishlistScreen() */ }
-        composable(Screen.Settings.route) { /* SettingsScreen() */ }
+        composable<Screen.Login> { LoginScreen(navController) }
+        composable<Screen.Register> { RegisterScreen(navController) }
+        composable<Screen.Forget> { ForgetPasswordScreen(navController) }
+        composable<Screen.Scaffold> { Scaffold(rootNavController = navController) }
     }
 }
